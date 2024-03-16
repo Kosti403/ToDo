@@ -1,0 +1,186 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3.h4.h5 {
+  margin: 0;
+}
+
+body {
+  margin: 0 auto;
+  background-color: blanchedalmond;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+/* start */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.containerToDo {
+  width: 600px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.mainTitle {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  color: gold;
+  text-align: center;
+}
+
+.formTodo {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.formTodo input {
+  background-color: #a8a8a8;
+  border: none;
+  border-radius: 15px 0px 0px 15px;
+  padding: 0 10x;
+  height: 40px;
+  font-size: 18px;
+  flex-grow: 1;
+  outline: none;
+}
+.formTodo input:hover {
+  background-color: rgb(92, 89, 83);
+}
+
+.formTodo button {
+  font-style: 16px;
+  background-color: coral;
+  padding: 0 15px;
+  color: #ffffff;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.item {
+  position: relative;
+  border-bottom: 2px solid #3333;
+  padding: 6px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+
+.itemForRemove{
+  background-color: #fff;
+  color: silver;
+}
+
+.TaskItem {
+  margin-right: 10px;
+  padding-left: 16px;
+  cursor: pointer;
+  flex-grow: 1;
+  position: relative;
+}
+.TaskItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border: 1px solid wheat;
+  border-radius: 50%;
+}
+
+.TaskItem,
+h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.taskDone {
+  text-decoration: line-through;
+  color: #a0a0a0;
+}
+
+.taskDone::before {
+  content: "";
+  position: absolute;
+  left: 1.5px;
+  top: 15px;
+  transform: translateY(-50%);
+  width: 11px;
+  height: 11px;
+  background-color: greenyellow;
+  border-radius: 50%;
+}
+
+.btnRemove {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid rgb(255, 54, 54);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.btnRemove:hover {
+  transition: 0.3s;
+  background-color: #ff9191;
+}
+
+.btnCansel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 2px solid red;
+  background-color: #333;
+  color: #000;
+}
+
+.hiddenbtnCansel{
+  display: none;
+}
